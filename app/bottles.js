@@ -4,11 +4,3 @@ exports.verse = function () {
         'Take one down and pass it around, 98 bottles of beer on the wall.',
     ].join('\n');
 };
-
-exports.verses = function () {
-    return;
-};
-
-exports.song = function () {
-    return;
-};
