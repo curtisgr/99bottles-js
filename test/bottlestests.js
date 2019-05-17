@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var bottles = require('../app/bottles');
+import { Bottles } from '../app/bottles';
 
 describe('99 Bottles', function () {
   it('can produce the last verse', function () {
@@ -8,6 +8,7 @@ describe('99 Bottles', function () {
           'Take one down and pass it around, 98 bottles of beer on the wall.',
       ].join('\n');
 
+      var bottles = new Bottles;
       expect(bottles.verse(99)).to.equal(expected);
   });
 
@@ -17,6 +18,7 @@ describe('99 Bottles', function () {
           'Take one down and pass it around, 88 bottles of beer on the wall.',
       ].join('\n');
 
+      var bottles = new Bottles;
       expect(bottles.verse(89)).to.equal(expected);
   });
 
@@ -26,6 +28,7 @@ describe('99 Bottles', function () {
           'Take one down and pass it around, 1 bottle of beer on the wall.',
       ].join('\n');
 
+      var bottles = new Bottles;
       expect(bottles.verse(2)).to.equal(expected);
   });
 
@@ -35,6 +38,7 @@ describe('99 Bottles', function () {
           'Take it down and pass it around, no more bottles of beer on the wall.',
       ].join('\n');
 
+      var bottles = new Bottles;
       expect(bottles.verse(1)).to.equal(expected);
   });
 
@@ -44,6 +48,7 @@ describe('99 Bottles', function () {
           'Go to the store and buy some more, 99 bottles of beer on the wall.',
       ].join('\n');
 
+      var bottles = new Bottles;
       expect(bottles.verse(0)).to.equal(expected);
   });
 
@@ -56,6 +61,7 @@ describe('99 Bottles', function () {
           'Take one down and pass it around, 97 bottles of beer on the wall.',
       ].join('\n');
 
+      var bottles = new Bottles;
       expect(bottles.verses(99, 98)).to.equal(expected);
   });
 
@@ -71,6 +77,7 @@ describe('99 Bottles', function () {
           'Go to the store and buy some more, 99 bottles of beer on the wall',
       ].join('\n');
 
+      var bottles = new Bottles;
       expect(bottles.verses(2, 0)).to.equal(expected);
   });
 
